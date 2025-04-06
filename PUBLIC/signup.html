@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Sign Up</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,7 +30,7 @@
             border-radius: 5px;
         }
         button {
-            background: #28a745;
+            background: #007BFF;
             color: white;
             padding: 10px;
             border: none;
@@ -39,7 +39,7 @@
             border-radius: 5px;
         }
         button:hover {
-            background: #218838;
+            background: #0056b3;
         }
         .error {
             color: red;
@@ -49,12 +49,14 @@
 </head>
 <body>
     <div class="container">
-        <h2>Login</h2>
-        <form id="loginForm" method="POST" action="/loginSubmit">
+        <h2>Sign Up</h2>
+        <form id="signupForm" method="POST" action="/signupSubmit">
+            <input type="text" name="name" placeholder="Full Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
-            <p class="error" id="loginErrorMessage"></p>
-            <button type="submit">Login</button>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <p class="error" id="errorMessage"></p>
+            <button type="submit">Sign Up</button>
         </form>
     </div>
 </body>
