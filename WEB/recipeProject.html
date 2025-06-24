@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends da Dhaba - Sweet Recipes</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f5f0;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            background-color: rgba(245, 245, 220, 0.2);
+        }
+
+        .navContainer {
+            width: 100%;
+            background-color: #4d1840;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .navLogo {
+            color: #57d21e;
+            font-size: 2rem;
+            font-weight: 700;
+            transition: all 0.5s ease;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .navLogo:hover {
+            transform: scale(1.05);
+            text-shadow: 3px 3px 6px yellow;
+        }
+
+        .listItems {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .listItems li {
+            list-style: none;
+        }
+
+        .listItems a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .listItems a:hover {
+            color: #ffcce6;
+            background-color: rgba(255,255,255,0.1);
+            text-decoration: none;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .contentBox {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .recipeSection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .recipeBox {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .recipeBox h1 {
+            color: #4d1840;
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+            border-bottom: 2px solid #4d1840;
+            padding-bottom: 10px;
+        }
+
+        .recipeBox h2 {
+            color: #d35400;
+            margin: 15px 0;
+            font-size: 1.5rem;
+        }
+
+        .recipeBox ul, .recipeBox ol {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        .recipeBox li {
+            margin-bottom: 8px;
+        }
+
+        .imageBox {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .imageBox img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.5s ease;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .imageBox img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(77, 24, 64, 0.4);
+        }
+
+        footer {
+            background-color: #4d1840;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .footerText {
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .navContainer {
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            .navLogo {
+                margin-bottom: 15px;
+            }
+            
+            .listItems {
+                width: 100%;
+                justify-content: space-around;
+                gap: 10px;
+            }
+            
+            .recipeSection {
+                flex-direction: column;
+            }
+            
+            .recipeBox, .imageBox {
+                min-width: 100%;
+            }
+            
+            .imageBox {
+                order: -1;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="navContainer">
+                <div class="navLogo">Friends da Dhaba</div>
+                <nav>
+                    <ul class="listItems">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Recipes</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="contentBox">
+            <section class="recipeSection gulabJamun">
+                <div class="recipeBox">
+                    <h1>Gulab Jamun</h1>
+                    <h2>Ingredients</h2>
+                    <ul>
+                        <li>4 slices bread (white/milk bread)</li>
+                        <li>2 tbsp milk (or as needed)</li>
+                        <li>1 tbsp sugar (optional)</li>
+                        <li>Oil/ghee for frying</li>
+                    </ul>
+                    <h2>For Sugar Syrup:</h2>
+                    <ul>
+                        <li>½ cup sugar</li>
+                        <li>½ cup water</li>
+                        <li>2 cardamom pods (crushed)</li>
+                    </ul>
+                    <h2>Recipe</h2>
+                    <ol>
+                        <li><strong>Prepare Sugar Syrup:</strong> Boil sugar + water until slightly sticky. Add cardamom and keep warm.</li>
+                        <li><strong>Make Dough:</strong> Cut bread crusts, crumble bread finely. Add milk and knead into soft dough.</li>
+                        <li><strong>Shape & Fry:</strong> Roll into small balls. Fry in low-heat oil until golden brown.</li>
+                        <li><strong>Soak in Syrup:</strong> Dip fried balls in warm syrup for 30 minutes.</li>
+                    </ol>
+                </div>
+                <div class="imageBox">
+                    <img src="./Gulab-Jamun-Marathi-Recipe.jpg" alt="Gulab Jamun">
+                </div>
+            </section>
+            
+            <section class="recipeSection burfi">
+                <div class="recipeBox">
+                    <h1>Coconut Burfi</h1>
+                    <h2>Ingredients</h2>
+                    <ul>
+                        <li>2 cups grated coconut (fresh or desiccated)</li>
+                        <li>1 cup sugar</li>
+                        <li>½ cup milk</li>
+                        <li>2 tbsp ghee</li>
+                        <li>4 cardamom pods (crushed)</li>
+                        <li>Chopped nuts (optional)</li>
+                    </ul>
+                    <h2>Recipe</h2>
+                    <ol>
+                        <li><strong>Cook Coconut & Sugar:</strong> In a pan, mix coconut + sugar + milk. Cook on medium heat, stirring until sugar dissolves.</li>
+                        <li><strong>Thicken the Mixture:</strong> Add ghee and keep stirring until it thickens (starts leaving the pan's sides). Add cardamom and nuts.</li>
+                        <li><strong>Set in Tray:</strong> Pour mixture into a greased tray and flatten evenly.</li>
+                        <li><strong>Cool & Cut:</strong> Let it cool for 1 hour, then cut into squares.</li>
+                    </ol>
+                </div>
+                <div class="imageBox">
+                    <img src="./plain-white-barfi.jpg" alt="Coconut Burfi">
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footerText">
+            <p>Copyright &copy; 2025 Friends da Dhaba Pvt Ltd. All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
